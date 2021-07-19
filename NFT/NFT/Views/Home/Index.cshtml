@@ -2,7 +2,40 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .content {
+    }
+
+    .leftPart {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .rightPart {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .midPart {
+        display: inline-block;
+        text-align: center;
+    }
+</style>
+
+<div class="content">
+    <div class="leftPart">
+        <label for="fname">Text to encrypt</label><br>
+        <textarea cols="40" rows="5" id="input"></textarea>
+    </div>
+    <div class="midPart">
+        <input checked="checked" type="radio" id="Encrypt" name="action">
+        <label for="Encrypt">Encrypt</label><br>
+        <input type="radio" id="Decrypt" name="action">
+        <label for="Decrypt">Decrypt</label><br>
+        <button onclick="" type="button">Convert</button>
+    </div>
+    <div class="rightPart">
+        <label for="fname">Encrypted result</label><br>
+        <textarea disabled cols="40" rows="5" id="output"></textarea>
+    </div>
 </div>
