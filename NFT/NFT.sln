@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFT", "NFT\NFT.csproj", "{F0DC02B6-E67A-411A-A994-75ED5629BF51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0DC02B6-E67A-411A-A994-75ED5629BF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0DC02B6-E67A-411A-A994-75ED5629BF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0DC02B6-E67A-411A-A994-75ED5629BF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0DC02B6-E67A-411A-A994-75ED5629BF51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08812455-2E7E-4AC5-895C-0B04D0D2E4FD}
+	EndGlobalSection
+EndGlobal
