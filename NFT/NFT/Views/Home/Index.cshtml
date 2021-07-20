@@ -1,4 +1,7 @@
-﻿@{
+﻿@model IOModel
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -22,7 +25,67 @@
     }
 </style>
 
-<div class="content">
+
+
+<body>
+    @using (Html.BeginForm("CreateStudent", "GetStudents", FormMethod.Post))
+    {
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th colspan="2" align="center">Person Details</th>
+            </tr>
+            <tr>
+                <td>String Before: </td>
+                <td>
+                    @Html.TextBoxFor(m => m.InputString)
+                </td>
+            </tr>
+            <tr>
+                <td>String After: </td>
+                <td>
+                    @Html.LabelFor(m => m.OutputString)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    }
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="content">
     <div class="leftPart">
         <label for="fname">Text to encrypt</label><br>
         <textarea cols="40" rows="5" id="input"></textarea>
@@ -32,10 +95,10 @@
         <label for="Encrypt">Encrypt</label><br>
         <input type="radio" id="Decrypt" name="action">
         <label for="Decrypt">Decrypt</label><br>
-        <button onclick="" type="button">Convert</button>
+        <input type="button" title="Delete" value="D" onclick="location.href='@Url.Action("CreateStudent", "GetStudentsController", new { InputString = item.ID })'" />
     </div>
     <div class="rightPart">
         <label for="fname">Encrypted result</label><br>
         <textarea disabled cols="40" rows="5" id="output"></textarea>
     </div>
-</div>
+</div>*@

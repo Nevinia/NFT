@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\biellmar\\Desktop\\NFT\\NFT\\NFT\\NFT.csproj": {}
+    "C:\\Users\\Martin\\Documents\\GitHub\\NFT\\NFT\\NFT\\NFT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\biellmar\\Desktop\\NFT\\NFT\\NFT\\NFT.csproj": {
+    "C:\\Users\\Martin\\Documents\\GitHub\\NFT\\NFT\\NFT\\NFT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\biellmar\\Desktop\\NFT\\NFT\\NFT\\NFT.csproj",
+        "projectUniqueName": "C:\\Users\\Martin\\Documents\\GitHub\\NFT\\NFT\\NFT\\NFT.csproj",
         "projectName": "NFT",
-        "projectPath": "C:\\Users\\biellmar\\Desktop\\NFT\\NFT\\NFT\\NFT.csproj",
-        "packagesPath": "C:\\Users\\biellmar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\biellmar\\Desktop\\NFT\\NFT\\NFT\\obj\\",
+        "projectPath": "C:\\Users\\Martin\\Documents\\GitHub\\NFT\\NFT\\NFT\\NFT.csproj",
+        "packagesPath": "C:\\Users\\Martin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Martin\\Documents\\GitHub\\NFT\\NFT\\NFT\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\biellmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,11 +22,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnet.myget.org/F/dotnet-corefxlab/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,10 +38,15 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.16, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
@@ -65,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,39 @@
+﻿@model NFT.Models.IOModel
+
+@{
+    ViewData["Title"] = "CreateStudent";
+}
+
+<h1>CreateStudent</h1>
+
+<h4>IOModel</h4>
+<hr />
+
+<body>
+    @using (Html.BeginForm("CreateStudent", "GetStudents", FormMethod.Post))
+    {
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th colspan="2" align="center">Person Details</th>
+            </tr>
+            <tr>
+                <td>String Before: </td>
+
+                <td>
+                    @Html.TextBoxFor(m => m.InputString)
+                </td>
+            </tr>
+            <tr>
+                <td>String After: </td>
+
+                <td>
+                    @Html.LabelFor(m => m.OutputString)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    }
+</body>
