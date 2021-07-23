@@ -1,37 +1,60 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using NFT.Models;
+using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using NFT.Models;
 
 namespace NFT.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+
+        public ActionResult DoAction()
         {
-            return View();
+            var ioModel = new IOModel();
+
+            return View("DoAction", ioModel);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public ActionResult DoAction(IOModel input)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var selectedMethod = input.Methods.FirstOrDefault(x => x.Name == input.SelectedMethod);
+
+            if (selectedMethod == null)
+            {
+                input.OutputString = "Selected method is not supported";
+            }
+            else if (input.Action == "Encrypt")
+            {
+                if (!selectedMethod.ValidateInputForEncrypt(input.InputString))
+                {
+                    input.OutputString = "Input is invalid";
+                }
+                else
+                    input.OutputString = selectedMethod.Encrypt(input.InputString);
+            }
+            else if (input.Action == "Decrypt")
+            {
+                if (!selectedMethod.ValidateInputForDecrypt(input.InputString))
+                {
+                    input.OutputString = "Input is invalid";
+                }
+                else
+                    input.OutputString = selectedMethod.Decrypt(input.InputString);
+            }
+            else
+            {
+                input.OutputString = "Select Encrypt/Decrypt action";
+            }
+
+            return View("DoAction", input);
         }
     }
 }

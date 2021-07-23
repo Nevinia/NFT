@@ -50,7 +50,7 @@ namespace NFT
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=GetStudents}/{action=CreateStudent}");
+                    pattern: "{controller=Home}/{action=DoAction}");
             });
         }
     }

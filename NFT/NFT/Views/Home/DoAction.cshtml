@@ -1,0 +1,65 @@
+﻿@model NFT.Models.IOModel
+
+@{
+    ViewData["Title"] = "Encrypt || Decrypt";
+}
+
+
+<style>
+    .content {
+    }
+
+    .textPart {
+        display: inline-block;
+        width: 400px;
+        height: 200px;
+    }
+
+    .leftPart {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .rightPart {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .midPart {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        height: 200px;
+    }
+</style>
+
+<body>
+    @using (Html.BeginForm("DoAction", "Home", FormMethod.Post))
+    {
+
+        <div class="content">
+            <div class="leftPart">
+                <label for="fname">Input</label><br>
+                @Html.TextAreaFor(m => m.InputString,
+                 new { @class = "textPart" })
+            </div>
+            <div class="midPart">
+                @Html.RadioButtonFor(m => m.Action, "Encrypt", new { @checked = "checked" }) Encrypt
+                <br>
+                @Html.RadioButtonFor(m => m.Action, "Decrypt") Decrypt
+                <br>
+                Selected algorithm <br>
+                @Html.DropDownListFor(m => m.SelectedMethod, new SelectList(Model.Methods, "Name", "Name"))
+                <br>
+                <input type="submit" value="Submit" />
+            </div>
+            <div class="rightPart">
+                <label for="fname">Output</label><br>
+                <textarea class="textPart" disabled id="output">@Model.OutputString</textarea>
+            </div>
+        </div>
+    }
+</body>
+
+
+
